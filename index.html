@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cassino X — the South African card game</title>
+<meta name="description" content="Cassino X is a free South African card game. 40 cards, no face cards. Capture, build and steal your way up the ladder.">
+<style>
+  :root{
+    --blue:#0040a0; --blue2:#0060c0; --gold:#e0b23c; --gold2:#e0a020;
+    --emerald:#00e0a0; --green:#80e060; --cyan:#00a0e0;
+    --ink:#0b1a2b; --cream:#f6f2e6;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; color:var(--cream);
+    font-family:'Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;
+    background:linear-gradient(160deg,var(--blue) 0%,var(--blue2) 55%,#00807a 100%);
+    background-attachment:fixed; min-height:100vh;
+  }
+  .wrap{max-width:680px;margin:0 auto;padding:34px 20px 60px;text-align:center}
+  .logo{
+    font-size:clamp(38px,11vw,68px); font-weight:800; letter-spacing:2px;
+    color:var(--gold); margin:8px 0 2px;
+    text-shadow:0 3px 0 rgba(0,0,0,.28);
+  }
+  .tag{font-size:clamp(15px,4.2vw,20px);opacity:.95;margin:0 0 26px}
+  .card{
+    background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22);
+    border-radius:22px; padding:22px 20px; margin:16px 0;
+    box-shadow:0 8px 22px rgba(0,0,0,.18); backdrop-filter:blur(3px);
+  }
+  .btn{
+    display:block; width:100%; max-width:420px; margin:14px auto 0;
+    padding:19px 24px; border-radius:999px; text-decoration:none;
+    font-weight:800; font-size:clamp(17px,4.6vw,21px); letter-spacing:.4px;
+  }
+  .btn-gold{background:var(--gold);color:var(--ink);box-shadow:0 6px 0 var(--gold2)}
+  .btn-green{background:var(--green);color:var(--ink);box-shadow:0 6px 0 #4fae3c}
+  .btn-ghost{background:rgba(255,255,255,.14);color:var(--cream);border:1px solid rgba(255,255,255,.35);box-shadow:none;font-size:clamp(15px,4vw,18px);padding:14px 22px}
+  ul{text-align:left;margin:6px auto;padding-left:22px;max-width:470px;line-height:1.75;font-size:clamp(15px,4vw,17px)}
+  li{margin:7px 0}
+  h2{font-size:clamp(19px,5vw,25px);color:var(--gold);margin:4px 0 10px;font-weight:800}
+  .note{font-size:13px;opacity:.8;line-height:1.6;margin-top:22px}
+  a{color:var(--cyan)}
+  .links{margin-top:26px;font-size:15px;line-height:2}
+  .links a{color:var(--cream);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:2px}
+  .badge{display:inline-block;background:var(--emerald);color:var(--ink);font-weight:800;
+    font-size:12px;letter-spacing:1px;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="badge">SOUTH AFRICA · FREE TO PLAY</div>
+  <div class="logo">CASSINO X</div>
+  <p class="tag">The 40-card game South Africa grew up playing.</p>
+
+  <div class="card">
+    <h2>What it is</h2>
+    <ul>
+      <li><strong>40 cards, no face cards.</strong> The SA rules, played straight.</li>
+      <li><strong>Capture, build, steal.</strong> Tap CHOW, BUILD or DRIFT — no dragging.</li>
+      <li><strong>Climb 15 levels</strong> from Noob to Grand Master.</li>
+      <li><strong>Play with your people.</strong> Local multiplayer on one phone, or online.</li>
+      <li><strong>Free.</strong> Coins are earned by playing and watching ads. They cannot be bought with cash and cannot be cashed out.</li>
+    </ul>
+  </div>
+
+  <a class="btn btn-gold" href="https://play.google.com/store/apps/details?id=com.mtsgames.cassinox">Get it on Google Play</a>
+  <a class="btn btn-green" href="https://whatsapp.com/channel/0029Vb8w4vGHltYFtgdCux1f">Follow the WhatsApp channel</a>
+
+  <div class="card">
+    <h2>Not a gambling app</h2>
+    <ul>
+      <li>No real money is staked, wagered or won. Ever.</li>
+      <li>Coins are virtual, have no cash value, and cannot be exchanged for money.</li>
+      <li>Intended for players aged 18 and over.</li>
+    </ul>
+  </div>
+
+  <div class="links">
+    <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="https://whatsapp.com/channel/0029Vb8w4vGHltYFtgdCux1f">Support</a> &nbsp;·&nbsp;
+    <a href="mailto:REPLACE_WITH_CONTACT_EMAIL">Contact</a>
+  </div>
+
+  <p class="note">
+    © 2026 MTS Games. Cassino X is an independent South African card game and is not
+    affiliated with any other card game or league.<br>
+    Google Play and the Google Play logo are trademarks of Google LLC.
+  </p>
+
+</div>
+</body>
+</html>
