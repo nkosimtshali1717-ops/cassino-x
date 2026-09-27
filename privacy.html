@@ -30,85 +30,123 @@
 
   <a class="back" href="index.html">← Cassino X</a>
   <h1>Privacy Policy</h1>
-  <p class="sub">Cassino X (package <code>com.mtsgames.cassinox</code>) · Effective September 2026</p>
+  <p class="sub">Cassino X (package <code>com.mtsgames.cassinox</code>) · Effective 27 September 2026</p>
 
   <div class="box key">
-    <strong>The short version.</strong> You can play Cassino X without giving us anything.
-    If you choose to sign in with Google we store your game profile online so it follows you
-    between devices. We show ads. We do not collect your contacts, location, photos, files,
-    microphone or camera, and we never sell your data.
+    <strong>The short version.</strong> You play with a name and a password that live only on your
+    device — there is no email, no phone number and no sign-in. Your name, wins and badge are
+    written to Google Firebase so other players can see them on the leaderboard, and we show
+    ads through Google AdMob, which may use your device's advertising ID. We do not collect your
+    contacts, precise location, photos, files, microphone or camera, and we never sell your data.
   </div>
 
   <h2>1. Who we are</h2>
   <p>
     Cassino X is developed and published by Mts games ("we", "us"). This policy explains
     what the app collects, why, and how you can get rid of it. It applies to the Cassino X
-    Android app and this website.
+    Android app and this website. It replaces an earlier version that described a completely
+    offline game with nothing collected — that is not what the app does today.
   </p>
 
-  <h2>2. Playing without an account</h2>
+  <h2>2. Your account is a name and a password, on your device</h2>
   <p>
-    You do not need an account to play. Without signing in, your progress is stored only on
-    your own device and we cannot identify you. The app uses an anonymous identifier so your
-    own progress stays yours — it is not linked to your name, email or phone number.
+    When you set the app up you choose a name and a password. That is the whole account. There is
+    no email address, no phone number, no sign-in with Google, no verification and no password
+    recovery — nothing exists that could restore the account on a new phone. The password is
+    stored as a salted hash, and the <strong>password, its hash and its salt never leave your
+    device</strong>.
   </p>
 
-  <h2>3. What we collect if you sign in with Google</h2>
-  <ul>
-    <li><strong>Your Google display name, email address and profile photo URL.</strong>
-      Used to show who you are in the app and on your profile.</li>
-    <li><strong>A Google account identifier.</strong> Used to attach your game progress to you.</li>
-  </ul>
-  <p>Alongside that, we store your <strong>game profile</strong>:</p>
-  <ul>
-    <li>Display name and chosen avatar</li>
-    <li>Level, badge and experience points</li>
-    <li>Win / loss / draw record and matches played</li>
-    <li>Virtual coin balance (TC)</li>
-  </ul>
-  <p>This is stored in Google Cloud Firestore, tied to your account identifier.</p>
-
-  <h2>4. Anonymous gameplay statistics</h2>
+  <h2>3. What stays on your device</h2>
   <p>
-    The app sends anonymous events to a server we run ourselves — for example "a match
-    finished", the rival level, whether it was won, and the score. Each event carries a
-    <strong>random installation ID</strong>, not your name, email or phone number. We use this
-    only to see which parts of the game are confusing or broken so we can fix them.
+    Your name, avatar, level, badge, wins, coins, unlocked cosmetics, daily challenge and settings
+    are saved in a file on your own phone. Playing 2–4 players on one phone happens entirely on the
+    device; nothing leaves the phone.
   </p>
 
-  <h2>5. Advertising</h2>
+  <h2>4. What goes to Google Firebase — and who can see it</h2>
   <p>
-    Cassino X shows <strong>rewarded ads</strong> through Google AdMob. You choose to watch them
-    in exchange for virtual coins. To serve ads, Google may collect and use your device's
-    advertising identifier and information about ad interactions, under
-    <a href="https://policies.google.com/privacy">Google's own Privacy Policy</a>.
+    The app uses Google Firebase (Cloud Firestore, with anonymous sign-in). It writes one player
+    record to the <code>players</code> collection in Firestore, tied to an anonymous per-install id.
+    That record holds your chosen <strong>name</strong>, your <strong>wins</strong>, your
+    <strong>badge / level</strong>, your <strong>leaderboard position</strong> and a referral count.
   </p>
-  <p>You can limit this at any time in Android:</p>
+  <div class="box">
+    <p style="margin-top:0;margin-bottom:0">
+      <strong>Your name and your score appear on the in-app leaderboard, where other players can
+      see them.</strong> If you do not want your name shown to other players, do not use a name you
+      would not want to be public.
+    </p>
+  </div>
+
+  <h2>5. The anonymous per-install id</h2>
+  <p>
+    On first run the app generates a random id and keeps it on the device. It ties your own progress
+    together and links it to your Firestore record. It is not your name, not your email and not your
+    phone number, and it is <strong>not hardware fingerprinting</strong> — it is a random number the
+    app makes up. It is also sent to the game's own server with the anonymous events in section 6.
+  </p>
+
+  <h2>6. Ads (Google AdMob)</h2>
+  <p>
+    Cassino X shows ads through <strong>Google AdMob</strong>. Today that is a rewarded ad you choose
+    to watch in exchange for virtual coins, and more ad formats are being added. To serve ads, Google
+    may collect and use your device's <strong>advertising identifier</strong> and information about ad
+    interactions, under <a href="https://policies.google.com/privacy">Google's own Privacy Policy</a>.
+  </p>
+  <p>You can reset or delete your advertising ID at any time in Android:</p>
   <p><code>Settings → Privacy → Ads → Delete / reset advertising ID</code></p>
   <p>We do not receive your name or email from AdMob.</p>
 
-  <h2>6. What we never collect</h2>
+  <h2>7. Anonymous gameplay events</h2>
+  <p>
+    The app sends anonymous events to a server we run ourselves — for example "a match finished",
+    the rival level, whether it was won, and the score. Each event carries the <strong>anonymous
+    per-install id</strong>, not your name, email or phone number. We use this only to see which parts
+    of the game are confusing or broken so we can fix them.
+  </p>
+
+  <h2>8. Approximate city from your IP address — NOT IMPLEMENTED YET</h2>
+  <div class="box">
+    <p style="margin-top:0">
+      <strong>This is not collected today.</strong> Nothing in the app and nothing on our server reads
+      your IP address to work out a city. It is a <em>possible</em> future addition: if it ships, the
+      server (not the app) would derive an <strong>approximate</strong> city from the connecting IP
+      address, store it next to the anonymous install id, and use it only for anonymous growth
+      analytics.
+    </p>
+    <p style="margin-bottom:0">
+      That city would be approximate — ISP and VPN routing put people in the wrong place — and would
+      never be shown as a player's location. This policy will be updated <strong>before</strong> it ships.
+    </p>
+  </div>
+
+  <h2>9. What we never collect</h2>
   <ul>
+    <li>Your email address (there is nowhere to enter one)</li>
+    <li>Your phone number</li>
     <li>Contacts, calendar or messages</li>
-    <li>Location</li>
+    <li>Precise location (GPS)</li>
     <li>Photos, videos or files</li>
     <li>Microphone or camera</li>
-    <li>Your phone number</li>
     <li>Payment or card details</li>
   </ul>
-  <p>The app requests only internet access, network/wifi state, vibration, wake-lock and the
-    advertising ID permission.</p>
+  <p>
+    The Android build requests: internet; network and Wi-Fi state; vibration; wake-lock; the
+    advertising ID permission (AD_ID, used by AdMob); and READ_BASIC_PHONE_STATE. The app does not ask
+    for, read or store your phone number, and it does not make calls or send SMS.
+  </p>
 
-  <h2>7. Who we share it with</h2>
+  <h2>10. Who we share it with</h2>
   <ul>
-    <li><strong>Google Firebase</strong> (Authentication and Cloud Firestore) — sign-in and your game profile.</li>
+    <li><strong>Google Firebase</strong> (Authentication and Cloud Firestore) — the player record and the leaderboard.</li>
     <li><strong>Google AdMob</strong> — advertising.</li>
-    <li><strong>Our own server</strong> — the anonymous gameplay events described in section 4.</li>
+    <li><strong>Our own server</strong> — the anonymous gameplay events described in section 7.</li>
   </ul>
   <p>We do not sell your personal information, and we do not share it with anyone else except
     where the law requires it.</p>
 
-  <h2>8. Where your data is stored</h2>
+  <h2>11. Where your data is stored</h2>
   <p>
     Our providers' servers are outside South Africa. Using the app means your information may
     be transferred to and processed in other countries, which the Protection of Personal
@@ -116,25 +154,25 @@
     its own contractual protections to data it holds for us.
   </p>
 
-  <h2>9. How long we keep it</h2>
-  <ul>
-    <li><strong>Game profile:</strong> until you ask us to delete it.</li>
-    <li><strong>Anonymous gameplay events:</strong> kept in aggregate; they cannot be traced back to you.</li>
-  </ul>
-
-  <h2>10. Deleting your data</h2>
+  <h2>12. Deleting your data</h2>
   <div class="box">
     <p style="margin-top:0">
-      Email <a href="mailto:Nkosimtshali1717@gmail.com"><strong>Nkosimtshali1717@gmail.com</strong></a>
-      from the Google account you signed in with, and ask us to delete your Cassino X data.
-      We will remove your stored profile within 30 days.
+      <strong>There is no delete button in the app yet</strong>, and the app cannot delete your
+      Firestore record for you — the Firestore rules refuse a delete from the app.
+    </p>
+    <p>
+      <strong>On your device:</strong> uninstall the app, or clear its storage. That removes
+      everything saved on your phone (name, password lock, progress, coins).
     </p>
     <p style="margin-bottom:0">
-      You can also clear everything stored on your own device by uninstalling the app.
+      <strong>Your leaderboard record:</strong> email
+      <a href="mailto:Nkosimtshali1717@gmail.com"><strong>Nkosimtshali1717@gmail.com</strong></a>
+      and ask us to delete your Cassino X player record. It is removed by hand; there is no
+      automatic tool for this yet.
     </p>
   </div>
 
-  <h2>11. Your rights (POPIA)</h2>
+  <h2>13. Your rights (POPIA)</h2>
   <p>Under South African law you may ask us to:</p>
   <ul>
     <li>Tell you what personal information we hold about you</li>
@@ -144,26 +182,26 @@
   </ul>
   <p>Contact us at the address above and we will respond within a reasonable time.</p>
 
-  <h2>12. Children</h2>
+  <h2>14. Children</h2>
   <p>
-    Cassino X is intended for players aged 18 and over. It is not directed at children, and we
-    do not knowingly collect information from anyone under 18. If you believe a child has
-    provided us with personal information, contact us and we will delete it.
+    Cassino X is not directed at children. It shows ads to all players, and the leaderboard shows
+    player names and scores to other players. If you believe a child has provided us with personal
+    information, contact us and we will delete it.
   </p>
 
-  <h2>13. Not a gambling app</h2>
+  <h2>15. Not a gambling app</h2>
   <p>
     Cassino X uses virtual coins with no monetary value. Nothing in the app can be wagered or
     exchanged for real money, and no real-money prizes are offered.
   </p>
 
-  <h2>14. Changes to this policy</h2>
+  <h2>16. Changes to this policy</h2>
   <p>
     If we change what we collect, we will update this page and change the effective date
     above. Continued use of the app after a change means you accept the updated policy.
   </p>
 
-  <h2>15. Contact</h2>
+  <h2>17. Contact</h2>
   <p>
     Questions about privacy, or a data request:
     <a href="mailto:Nkosimtshali1717@gmail.com">Nkosimtshali1717@gmail.com</a>
