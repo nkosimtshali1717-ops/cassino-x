@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Keep the marketing site and the privacy policy crawlable — the policy URL is
+# the one submitted to Google Play, so it must stay reachable to crawlers.
+Sitemap: https://app.nkocy.com/sitemap.xml

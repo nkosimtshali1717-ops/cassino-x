@@ -1,10 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cassino X — the South African card game</title>
-<meta name="description" content="Cassino X is a free South African card game. 40 cards, no face cards. Capture, build and steal your way up the ladder.">
+
+<!-- ── PRIMARY SEO ───────────────────────────────────────────────────────────
+     The title leads with what people actually type ("cassino", "South African
+     card game") rather than the brand alone, because nobody searches a brand
+     they have never heard of. The description is the click-through pitch and is
+     kept under ~155 chars so Google shows it whole. -->
+<title>Cassino X — Free South African Card Game (SA Cassino) | Download</title>
+<meta name="description" content="Cassino X is a free South African card game. 40 cards, no face cards — capture, build and steal your way up 15 levels. Play solo, or with friends. No real money, 18+.">
+<link rel="canonical" href="https://app.nkocy.com/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0b1a2b">
+<meta name="author" content="Mts Games">
+
+<!-- ── LOCAL / LANGUAGE SIGNALS ──
+     Google uses these for the "South African card game" intent. -->
+<meta name="geo.region" content="ZA">
+<meta name="language" content="English">
+<link rel="alternate" hreflang="en-ZA" href="https://app.nkocy.com/">
+<link rel="alternate" hreflang="x-default" href="https://app.nkocy.com/">
+
+<!-- ── SHARE CARDS ──
+     WhatsApp and Facebook previews are this game's growth engine, so the OG
+     tags matter more here than the search tags do. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cassino X">
+<meta property="og:title" content="Cassino X — the 40-card game South Africa grew up playing">
+<meta property="og:description" content="Free South African card game. Capture, build and steal your way up 15 levels. Play solo or with friends. No real money. 18+.">
+<meta property="og:image" content="https://app.nkocy.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cassino X — the 40-card game South Africa grew up playing">
+<meta property="og:url" content="https://app.nkocy.com/">
+<meta property="og:locale" content="en_ZA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cassino X — Free South African Card Game">
+<meta name="twitter:description" content="40 cards, no face cards. Capture, build and steal your way up 15 levels. Free, no real money, 18+.">
+<meta name="twitter:image" content="https://app.nkocy.com/assets/og-image.png">
+
+<!-- ── ICONS ── -->
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<!-- ── STRUCTURED DATA ──
+     Tells Google this page is a video game with a price of zero, an age rating
+     and screenshots — the fields that earn a richer result than a plain link. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Cassino X",
+  "alternateName": "SA Cassino",
+  "url": "https://app.nkocy.com/",
+  "image": "https://app.nkocy.com/assets/og-image.png",
+  "description": "Cassino X is a free South African card game. 40 cards, no face cards — capture, build and steal your way up 15 levels. Solo, local multiplayer and online play.",
+  "genre": ["Card game", "Casino", "Strategy"],
+  "gamePlatform": ["Android", "Mobile"],
+  "applicationCategory": "Game",
+  "operatingSystem": "Android",
+  "inLanguage": "en-ZA",
+  "isAccessibleForFree": true,
+  "author": { "@type": "Organization", "name": "Mts Games" },
+  "publisher": { "@type": "Organization", "name": "Mts Games" },
+  "contentRating": "18+",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "ZAR" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Is Cassino X free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Cassino X is free to play. Coins are earned by playing and by watching optional ads. They cannot be bought with cash and cannot be cashed out."}},
+    {"@type":"Question","name":"Is Cassino X a gambling app?","acceptedAnswer":{"@type":"Answer","text":"No. No real money is staked, wagered or won, ever. Coins are virtual and have no cash value. Intended for players aged 18 and over."}},
+    {"@type":"Question","name":"How many cards are in SA cassino?","acceptedAnswer":{"@type":"Answer","text":"40 cards. The South African version removes the face cards, so the deck runs from ace to ten in all four suits."}},
+    {"@type":"Question","name":"Can I play Cassino X with a friend on one phone?","acceptedAnswer":{"@type":"Answer","text":"Yes. Cassino X supports two players on one phone, and online play between two phones."}},
+    {"@type":"Question","name":"What is the difference between chow, build and drift?","acceptedAnswer":{"@type":"Answer","text":"Chow captures the cards on the table that match your card. Build sets a value you must collect on a later turn. Drift adds your card to the table and claims nothing."}}
+  ]
+}
+</script>
+
 <style>
   :root{
     --blue:#0040a0; --blue2:#0060c0; --gold:#e0b23c; --gold2:#e0a020;
@@ -12,49 +91,75 @@
     --ink:#0b1a2b; --cream:#f6f2e6;
   }
   *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
   body{
     margin:0; color:var(--cream);
     font-family:'Segoe UI',system-ui,-apple-system,'Helvetica Neue',Arial,sans-serif;
     background:linear-gradient(160deg,var(--blue) 0%,var(--blue2) 55%,#00807a 100%);
-    background-attachment:fixed; min-height:100vh;
+    background-attachment:fixed; min-height:100vh; line-height:1.6;
   }
-  .wrap{max-width:680px;margin:0 auto;padding:34px 20px 60px;text-align:center}
-  .logo{
-    font-size:clamp(38px,11vw,68px); font-weight:800; letter-spacing:2px;
-    color:var(--gold); margin:8px 0 2px;
-    text-shadow:0 3px 0 rgba(0,0,0,.28);
-  }
+  .wrap{max-width:760px;margin:0 auto;padding:34px 20px 60px;text-align:center}
+  .logo{font-size:clamp(38px,11vw,68px);font-weight:800;letter-spacing:2px;
+    color:var(--gold);margin:8px 0 2px;text-shadow:0 3px 0 rgba(0,0,0,.28)}
   .tag{font-size:clamp(15px,4.2vw,20px);opacity:.95;margin:0 0 26px}
-  .card{
-    background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22);
-    border-radius:22px; padding:22px 20px; margin:16px 0;
-    box-shadow:0 8px 22px rgba(0,0,0,.18); backdrop-filter:blur(3px);
-  }
-  .btn{
-    display:block; width:100%; max-width:420px; margin:14px auto 0;
-    padding:19px 24px; border-radius:999px; text-decoration:none;
-    font-weight:800; font-size:clamp(17px,4.6vw,21px); letter-spacing:.4px;
-  }
+  h1{font-size:0;margin:0;position:absolute;left:-9999px}   /* for SEO, not for eyes */
+  .card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);
+    border-radius:22px;padding:22px 20px;margin:16px 0;
+    box-shadow:0 8px 22px rgba(0,0,0,.18)}
+  .btn{display:block;width:100%;max-width:420px;margin:14px auto 0;
+    padding:19px 24px;border-radius:999px;text-decoration:none;
+    font-weight:800;font-size:clamp(17px,4.6vw,21px);letter-spacing:.4px}
   .btn-gold{background:var(--gold);color:var(--ink);box-shadow:0 6px 0 var(--gold2)}
   .btn-green{background:var(--green);color:var(--ink);box-shadow:0 6px 0 #4fae3c}
-  .btn-ghost{background:rgba(255,255,255,.14);color:var(--cream);border:1px solid rgba(255,255,255,.35);box-shadow:none;font-size:clamp(15px,4vw,18px);padding:14px 22px}
-  ul{text-align:left;margin:6px auto;padding-left:22px;max-width:470px;line-height:1.75;font-size:clamp(15px,4vw,17px)}
+  .btn-ghost{background:rgba(255,255,255,.14);color:var(--cream);
+    border:1px solid rgba(255,255,255,.35);box-shadow:none;
+    font-size:clamp(15px,4vw,18px);padding:14px 22px}
+  ul{text-align:left;margin:6px auto;padding-left:22px;max-width:520px;
+    line-height:1.75;font-size:clamp(15px,4vw,17px)}
   li{margin:7px 0}
   h2{font-size:clamp(19px,5vw,25px);color:var(--gold);margin:4px 0 10px;font-weight:800}
+  h3{font-size:clamp(16px,4.2vw,19px);margin:16px 0 4px;color:var(--cream)}
   .note{font-size:13px;opacity:.8;line-height:1.6;margin-top:22px}
   a{color:var(--cyan)}
   .links{margin-top:26px;font-size:15px;line-height:2}
-  .links a{color:var(--cream);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:2px}
-  .badge{display:inline-block;background:var(--emerald);color:var(--ink);font-weight:800;
-    font-size:12px;letter-spacing:1px;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+  .links a{color:var(--cream);text-decoration:none;
+    border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:2px}
+  .badge{display:inline-block;background:var(--emerald);color:var(--ink);
+    font-weight:800;font-size:12px;letter-spacing:1px;padding:5px 12px;
+    border-radius:999px;margin-bottom:14px}
+  .shots{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:22px 0 4px}
+  .shots img{width:44%;max-width:250px;min-width:140px;border-radius:16px;
+    box-shadow:0 10px 24px rgba(0,0,0,.35);height:auto}
+  .soon{display:inline-block;background:rgba(255,255,255,.16);
+    border:1px dashed rgba(255,255,255,.5);color:var(--cream);font-weight:700;
+    font-size:clamp(15px,4vw,18px);padding:15px 22px;border-radius:999px;
+    max-width:420px;width:100%;margin:6px auto 0}
+  details{text-align:left;max-width:560px;margin:8px auto;font-size:15px;
+    border-bottom:1px solid rgba(255,255,255,.18);padding-bottom:8px}
+  summary{cursor:pointer;font-weight:700;padding:6px 0}
+  .social{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+  .social a{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);
+    padding:10px 16px;border-radius:999px;text-decoration:none;color:var(--cream);
+    font-size:14px;font-weight:600}
 </style>
 </head>
 <body>
-<div class="wrap">
+<main class="wrap">
+
+  <h1>Cassino X — free South African card game (SA cassino)</h1>
 
   <div class="badge">SOUTH AFRICA · FREE TO PLAY</div>
   <div class="logo">CASSINO X</div>
   <p class="tag">The 40-card game South Africa grew up playing.</p>
+
+  <div class="shots">
+    <img src="assets/shot-menu.png" width="250" height="444"
+         alt="Cassino X main menu showing Play, Multiplayer and the rival challenge ladder"
+         loading="lazy" decoding="async">
+    <img src="assets/shot-table.png" width="250" height="444"
+         alt="A Cassino X match in progress: the felt table, the player's hand and the score"
+         loading="lazy" decoding="async">
+  </div>
 
   <div class="card">
     <h2>What it is</h2>
@@ -62,13 +167,36 @@
       <li><strong>40 cards, no face cards.</strong> The SA rules, played straight.</li>
       <li><strong>Capture, build, steal.</strong> Tap CHOW, BUILD or DRIFT — no dragging.</li>
       <li><strong>Climb 15 levels</strong> from Noob to Grand Master.</li>
-      <li><strong>Play with your people.</strong> Local multiplayer on one phone, or online.</li>
+      <li><strong>Play with your people.</strong> Two players on one phone, or online.</li>
       <li><strong>Free.</strong> Coins are earned by playing and watching ads. They cannot be bought with cash and cannot be cashed out.</li>
     </ul>
   </div>
 
-  <a class="btn btn-gold" href="https://play.google.com/store/apps/details?id=com.mtsgames.cassinox">Get it on Google Play</a>
-  <a class="btn btn-green" href="https://whatsapp.com/channel/0029Vb8w4vGHltYFtgdCux1f">Follow the WhatsApp channel</a>
+  <a class="btn btn-green" href="https://github.com/nkosimtshali1717-ops/cassino-x/releases/latest">Download for Android (APK)</a>
+  <div class="soon">Coming soon to Google Play</div>
+  <a class="btn btn-ghost" href="https://whatsapp.com/channel/0029Vb8w4vGHltYFtgdCux1f">Follow the WhatsApp channel</a>
+
+  <div class="card">
+    <h2>How to play SA Cassino</h2>
+    <ul>
+      <li><strong>Chow</strong> — take the table cards that match your card. Aces and tens also sweep the whole table.</li>
+      <li><strong>Build</strong> — set a value on the table that you must collect on a later turn.</li>
+      <li><strong>Drift</strong> — add your card to the table and claim nothing.</li>
+      <li><strong>Score</strong> — most cards, most spades, and the ten of diamonds. First to 21 points wins.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Common questions</h2>
+    <details open><summary>Is Cassino X free?</summary>
+      Yes. Coins are earned by playing and by watching optional ads. They cannot be bought with cash and cannot be cashed out.</details>
+    <details><summary>Is this a gambling app?</summary>
+      No. No real money is staked, wagered or won, ever. Coins are virtual and have no cash value. Intended for players aged 18 and over.</details>
+    <details><summary>How many cards are in SA cassino?</summary>
+      40 cards. The South African version removes the face cards, so the deck runs from ace to ten in all four suits.</details>
+    <details><summary>Can I play with a friend on one phone?</summary>
+      Yes — two players on one phone, and online play between two phones.</details>
+  </div>
 
   <div class="card">
     <h2>Not a gambling app</h2>
@@ -77,6 +205,11 @@
       <li>Coins are virtual, have no cash value, and cannot be exchanged for money.</li>
       <li>Intended for players aged 18 and over.</li>
     </ul>
+  </div>
+
+  <div class="social">
+    <a href="https://whatsapp.com/channel/0029Vb8w4vGHltYFtgdCux1f">WhatsApp</a>
+    <!-- TikTok and Facebook links go here — see SITE_NOTES.md -->
   </div>
 
   <div class="links">
@@ -91,6 +224,6 @@
     Google Play and the Google Play logo are trademarks of Google LLC.
   </p>
 
-</div>
+</main>
 </body>
 </html>
